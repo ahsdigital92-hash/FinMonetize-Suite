@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { HeaderAd } from "@/components/ads";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 border-b border-gray-200">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold text-blue-600">FinMonetize</span>
           <span className="text-xl font-semibold text-gray-800">Suite</span>
@@ -28,6 +29,11 @@ export default function Header() {
             </svg>
           </button>
         </div>
+      </div>
+      
+      {/* Header Ad Slot - Responsive Leaderboard */}
+      <div className="border-b border-gray-200">
+        <HeaderAd />
       </div>
     </header>
   );
